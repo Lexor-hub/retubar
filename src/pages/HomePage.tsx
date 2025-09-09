@@ -6,8 +6,14 @@ import Equipment from '../components/Equipment';
 import Segments from '../components/Segments';
 import Process from '../components/Process';
 import Partnership from '../components/Partnership';
+import Contact from '../components/Contact';
+import { PageType } from '../types';
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+  onNavigate: (page: PageType) => void;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   return (
     <>
       <Hero />
@@ -17,6 +23,7 @@ const HomePage: React.FC = () => {
       <Segments />
       <Process />
       <Partnership />
+      <Contact onNavigate={onNavigate} />
     </>
   );
 };
