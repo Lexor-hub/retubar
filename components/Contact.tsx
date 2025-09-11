@@ -3,14 +3,14 @@ import { PhoneIcon, DocumentTextIcon } from './Icons';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contato" className="py-20 bg-brand-dark-blue">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-brand-dark-blue flex-grow flex items-center justify-center">
+      <div className="container mx-auto px-6 w-full">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-lightest-slate">Contato Estratégico</h2>
           <p className="mt-2 text-brand-light-slate">Estamos prontos para resolver seu desafio.</p>
         </div>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-brand-medium-blue p-8 rounded-lg border-2 border-brand-yellow/80 text-center shadow-2xl">
+          <div className="bg-brand-medium-blue p-8 rounded-lg border-2 border-brand-yellow/80 text-center shadow-2xl flex flex-col justify-center">
             <div className="flex justify-center mb-4">
               <PhoneIcon className="w-10 h-10 text-brand-yellow" />
             </div>
@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
               (11) 3090-9775
             </a>
           </div>
-          <div className="bg-brand-medium-blue p-8 rounded-lg border border-brand-slate/50 text-center shadow-lg">
+          <div className="bg-brand-medium-blue p-8 rounded-lg border border-brand-slate/50 text-center shadow-lg flex flex-col justify-center">
             <div className="flex justify-center mb-4">
               <DocumentTextIcon className="w-10 h-10 text-brand-light-slate" />
             </div>

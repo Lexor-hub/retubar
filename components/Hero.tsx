@@ -1,16 +1,19 @@
 import React from 'react';
 import { ShieldCheckIcon, GlobeAltIcon, StarIcon } from './Icons';
+import HeatExchanger3D from './HeatExchanger3D';
 
-const Hero: React.FC = () => {
+type HeroProps = {
+  navigateTo: (page: string) => void;
+};
+
+const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
   return (
-    <section id="inicio" className="relative bg-brand-dark-blue">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581092921440-4c3030ba017a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
-      >
-        <div className="absolute inset-0 bg-brand-dark-blue/80"></div>
-      </div>
+    <section className="relative bg-brand-dark-blue overflow-hidden">
+      {/* Animated Background */}
+      <HeatExchanger3D />
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-dark-blue/80 via-brand-dark-blue/70 to-brand-dark-blue/80"></div>
       
       <div className="container mx-auto px-6 pt-24 pb-40 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase">
@@ -22,12 +25,12 @@ const Hero: React.FC = () => {
           Especialistas em manutenção emergencial de trocadores de calor industriais. Quando outros dizem "impossível", nós entregamos.
         </p>
         <div className="mt-10">
-          <a
-            href="#contato"
+          <button
+            onClick={() => navigateTo('contact')}
             className="bg-brand-yellow text-brand-dark-blue font-bold py-4 px-10 rounded-lg text-lg hover:bg-amber-300 transition-all duration-300 transform hover:scale-105 shadow-xl"
           >
             SOLICITE SEU DIAGNÓSTICO TÉCNICO
-          </a>
+          </button>
         </div>
       </div>
       

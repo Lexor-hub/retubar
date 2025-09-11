@@ -18,7 +18,7 @@ const segmentsData = [
 
 const Segments: React.FC = () => {
   return (
-    <section className="relative py-20 bg-brand-medium-blue pb-24">
+    <section className="relative py-20 bg-brand-medium-blue">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-lightest-slate">Experiência nos Setores Mais Exigentes</h2>
@@ -39,11 +39,6 @@ const Segments: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none" className="relative block w-full h-[100px]">
-              <path d="M0,50 C240,90 480,90 720,50 C960,10 1200,10 1440,50 L1440,100 L0,100 Z" fill="#0A192F"></path>
-          </svg>
       </div>
     </section>
   );

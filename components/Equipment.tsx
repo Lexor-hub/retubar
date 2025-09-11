@@ -5,19 +5,19 @@ const equipmentData = [
         title: "AIR COOLER",
         description: "Resfriamento eficiente para processos industriais críticos",
         features: ["Retubagem completa com materiais de alta resistência", "Manutenção preventiva e corretiva em campo"],
-        imgSrc: "https://images.unsplash.com/photo-1617789942337-64c4c85744b6?q=80&w=500&auto=format&fit=crop"
+        imgSrc: "https://images.unsplash.com/photo-1629906002314-a5b17a15155b?q=80&w=800&auto=format&fit=crop"
     },
     {
         title: "TROCADOR DE CALOR CASCO TUBO",
         description: "Recuperação total da eficiência em equipamentos de alta complexidade",
         features: ["Manutenção de equipamentos de grande porte", "Substituição de feixes tubulares completos"],
-        imgSrc: "https://images.unsplash.com/photo-1555531835-36b63a9235e5?q=80&w=500&auto=format&fit=crop"
+        imgSrc: "https://images.unsplash.com/photo-1618422168171-87a42b10a248?q=80&w=800&auto=format&fit=crop"
     },
     {
         title: "RETUBAGEM DE FEIXE TUBULAR",
         description: "Renovação completa para máxima performance operacional",
         features: ["Fabricação de feixes sob medida", "Materiais especificados conforme aplicação"],
-        imgSrc: "https://images.unsplash.com/photo-1628359232984-7a2c6d4be2a9?q=80&w=500&auto=format&fit=crop"
+        imgSrc: "https://images.unsplash.com/photo-1543369792-9445103a4571?q=80&w=800&auto=format&fit=crop"
     }
 ];
 
@@ -44,7 +44,7 @@ const EquipmentCard: React.FC<{ title: string; description: string; features: st
 
 const Equipment: React.FC = () => {
     return (
-        <section className="relative py-20 bg-brand-dark-blue pb-24">
+        <section className="relative py-20 bg-brand-dark-blue">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-brand-lightest-slate">Expertise Técnica Comprovada</h2>
@@ -55,11 +55,6 @@ const Equipment: React.FC = () => {
                         <EquipmentCard key={index} {...item} />
                     ))}
                 </div>
-            </div>
-            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none" className="relative block w-full h-[100px]">
-                    <path d="M0,50 C240,90 480,90 720,50 C960,10 1200,10 1440,50 L1440,100 L0,100 Z" fill="#172A46"></path>
-                </svg>
             </div>
         </section>
     );

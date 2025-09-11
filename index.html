@@ -20,7 +20,17 @@
             },
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
-            }
+            },
+            keyframes: {
+              rotateBundle: {
+                '0%': { transform: 'scale(1.2) rotateX(-10deg) rotateY(15deg) rotateZ(-3deg)' },
+                '50%': { transform: 'scale(1.2) rotateX(10deg) rotateY(15deg) rotateZ(3deg)' },
+                '100%': { transform: 'scale(1.2) rotateX(-10deg) rotateY(15deg) rotateZ(-3deg)' },
+              },
+            },
+            animation: {
+              'rotate-bundle': 'rotateBundle 30s linear infinite',
+            },
           }
         }
       }
